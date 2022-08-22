@@ -1,0 +1,12 @@
+{
+  "name": "likeBtn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "PiKey",
+  "license": "MIT",
+  "pwa-studio": {
+    "targets": {
+      "intercept": "src/targets/intercept"
+    }
+  }
+}
