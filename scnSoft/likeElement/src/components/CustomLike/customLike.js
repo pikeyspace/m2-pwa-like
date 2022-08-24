@@ -1,16 +1,47 @@
 import React from 'react';
+import backgroundImage from './like.png';
+import { useState } from 'react';
 
-const customBtnStyle = {
+
+const CustomLike = () => {
+
+    const [isHover, setIsHover] = useState(false);
+
+   const handleMouseEnter = () => {
+      setIsHover(true);
+   };
+
+   const handleMouseLeave = () => {
+      setIsHover(false);
+   };
+
+   const customBtnStyle = {
     width: "40px",
     height: "40px",
     margin: "20px auto",
-    backgroundColor: "#ff0000",
     borderRadius: "3px",
-}
+    border: "1px solid #cdcdcd",
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    transition: "256ms",
+    boxShadow: isHover ? "0 0 10px #cdcdcd" : "none",
+    };
 
-const CustomLike = () => {
+    const activateLike = () => {
+        console.log("You just press 'Like!'");
+    };
+
     return (
-       <button style={customBtnStyle} className='custom-like-btn' name="customLikeBtn">Like!</button>
+       <button 
+            style={customBtnStyle}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className='custom-like-btn' 
+            name="customLikeBtn"
+            onClick={activateLike}>
+        </button>
     )
 }
 
