@@ -1,15 +1,16 @@
 import React from 'react';
 
 const customBtnStyle = {
-    with: "40px",
-    borderRadius: "3px",
+    width: "40px",
     height: "40px",
+    margin: "20px auto",
     backgroundColor: "#ff0000",
+    borderRadius: "3px",
 }
 
 const CustomLike = () => {
     return (
-       <button style={customBtnStyle} className='custom-like-btn' name="customLikeBtn">Like</button>
+       <button style={customBtnStyle} className='custom-like-btn' name="customLikeBtn">Like!</button>
     )
 }
 
